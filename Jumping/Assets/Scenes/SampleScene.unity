@@ -788,3 +788,70 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1 &1965172085
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1965172086}
+  - component: {fileID: 1965172087}
+  m_Layer: 0
+  m_Name: Fruit
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1965172086
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1965172085}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7.86, y: 3.14, z: -1.8126743}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1965172087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1965172085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3b8262afa8b44b81bc9614783daa37f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fruitPrefab:
+  - {fileID: 6472559375802369876, guid: 0bb6d9ea85700410c9ee99f0a98545df, type: 3}
+  - {fileID: 7572247967314289845, guid: 17f202a124b894af8a945b53db6223c1, type: 3}
+  - {fileID: 3143627055059226039, guid: 237596156f5214a5e8b2dcf583436dbd, type: 3}
+  - {fileID: 315573208800124035, guid: 50aae4d2d0043404da8f0e4518d3c5bb, type: 3}
+  - {fileID: 5407412723047495996, guid: b8908ba2e24ff4015ab5f322d29b8fec, type: 3}
+  - {fileID: 4219621753147604194, guid: fd04a12c6080f4698ada13c2cb623370, type: 3}
+  - {fileID: 2334038624747244796, guid: 731257e0ffa1247c98a61279ac2c0e9e, type: 3}
+  - {fileID: 1278946698884243485, guid: dc70b4ec695f1471bb6fb7a64b8376ae, type: 3}
+  - {fileID: 1715154027407218015, guid: e2a63d8f709b34e1f83530519f1c2164, type: 3}
+  - {fileID: 2204900667894381086, guid: f5bff1278d66a431c9c4e2b09fb77439, type: 3}
+  - {fileID: 1756991186662995399, guid: 766265167d5684c96b4f167d12212fc5, type: 3}
+  - {fileID: 1075979669997305420, guid: fbe78f57832bd4d7896c8be35f90fc71, type: 3}
+  - {fileID: 2180633458633175279, guid: 1de55947f42634537aaf1c75841facb6, type: 3}
+  - {fileID: 2617456630629236472, guid: c99792ef0bd0146e6983fe41756b9e67, type: 3}
+  - {fileID: 3965203093585402688, guid: c27cb66d7e2684d84b6f2d56d062a7b6, type: 3}
+  - {fileID: 6883241500912926330, guid: aa5aa6427cb5b4ff1ad63678c012df0a, type: 3}
+  - {fileID: 916603318520271755, guid: f21ba76913e38476c8217518509d2c0e, type: 3}
+  - {fileID: 942517891065039127, guid: c45a94a3f51f445b69f9795b3a97efb0, type: 3}
+  - {fileID: 3886057132833753207, guid: dcd158894ae2d413fa30579680a3e817, type: 3}
+  - {fileID: 6241767736877868793, guid: 7dfc9816206bb49109378d1d4bbeed32, type: 3}
+  secondSpawn: 1
+  minTras: -0.055
+  maxTras: 9
