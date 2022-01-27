@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1030296135123099115}
   - component: {fileID: -8473529004236305746}
   - component: {fileID: 2063741610988455752}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: black-berry-light
   m_TagString: Untagged
   m_Icon: {fileID: 0}

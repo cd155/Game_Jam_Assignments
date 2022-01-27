@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6325087202990462291}
   - component: {fileID: -3613347244906334552}
   - component: {fileID: 8915008492786085290}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: plum
   m_TagString: Untagged
   m_Icon: {fileID: 0}

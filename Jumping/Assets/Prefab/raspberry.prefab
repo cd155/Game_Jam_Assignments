@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2236503662387742620}
   - component: {fileID: -8893628006035486629}
   - component: {fileID: -1079541746939781669}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: raspberry
   m_TagString: Untagged
   m_Icon: {fileID: 0}
