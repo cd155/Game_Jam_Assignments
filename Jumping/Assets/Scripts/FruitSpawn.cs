@@ -25,8 +25,12 @@ public class FruitSpawn: MonoBehaviour
         {
             var wanted = Random.Range(minTras, maxTras);
             var position = new Vector3(transform.position.x, wanted);
-            GameObject gameObject = Instantiate(
-                fruitPrefab[Random.Range(0, fruitPrefab.Length)], position, Quaternion.identity);
+            GameObject gameObject = Instantiate
+            (
+                fruitPrefab[Random.Range(0, fruitPrefab.Length)], 
+                position, 
+                Quaternion.identity
+            );
             gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.left * Random.Range(minThrust, maxThrust));
             yield return new WaitForSeconds(secondSpawn);
             Destroy(gameObject, time);
