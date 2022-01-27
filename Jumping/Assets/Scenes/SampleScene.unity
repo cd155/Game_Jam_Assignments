@@ -690,7 +690,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!212 &1152063534
 SpriteRenderer:
@@ -751,7 +751,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1152063530}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 1.39, y: 0, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
@@ -813,7 +813,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1965172085}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.86, y: 3.14, z: -1.8126743}
+  m_LocalPosition: {x: 18.81, y: 2.91, z: -1.8126743}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -854,4 +854,4 @@ MonoBehaviour:
   - {fileID: 6241767736877868793, guid: 7dfc9816206bb49109378d1d4bbeed32, type: 3}
   secondSpawn: 1
   minTras: -0.055
-  maxTras: 9
+  maxTras: 8

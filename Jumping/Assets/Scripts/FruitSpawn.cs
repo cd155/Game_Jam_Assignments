@@ -5,12 +5,12 @@ using UnityEngine;
 public class FruitSpawn: MonoBehaviour
 {
     [SerializeField] GameObject[] fruitPrefab;
-    [SerializeField] float secondSpawn = 0.5f;
+    [SerializeField] float secondSpawn = 15.0f;
     [SerializeField] float minTras;
     [SerializeField] float maxTras;
     private float minThrust = 70.0f;
     private float maxThrust = 120.0f;
-    private float time = 10.0f;
+    private float time = 15.0f;
 
     // Start is called before the first frame update
     void Start()

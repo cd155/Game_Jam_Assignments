@@ -9,7 +9,7 @@ public class PlayController : MonoBehaviour
     float jumpSpeedShort = 25.0f;
     float jumpSpeedMiddle = 35.0f;
     float jumpSpeedLarge = 45.0f;
-
+    float originalX = 0.0f;
     [SerializeField] LayerMask platformLayerMask;
     // bool leftInput;
     // bool rightInput;
@@ -20,6 +20,7 @@ public class PlayController : MonoBehaviour
     void Start()
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
+        originalX = rigidbody2D.position.x;
     }
 
     // Update is called once per frame
@@ -27,19 +28,19 @@ public class PlayController : MonoBehaviour
     {
         if (jumpShort && isGrounded())
         {
-            rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, jumpSpeedShort);
+            rigidbody2D.velocity = new Vector2(0, jumpSpeedShort);
         }
         else if (jumpMiddle && isGrounded())
         {
-            rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, jumpSpeedMiddle);
+            rigidbody2D.velocity = new Vector2(0, jumpSpeedMiddle);
         }
         else if (jumpLarge && isGrounded())
         {
-            rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, jumpSpeedLarge);
+            rigidbody2D.velocity = new Vector2(0, jumpSpeedLarge);
         }
-        else
+        else if (isGrounded())
         {
-            rigidbody2D.velocity = new Vector2(0, rigidbody2D.velocity.y);
+            rigidbody2D.MovePosition(new Vector2(originalX, rigidbody2D.position.y));
         }
     }
 
@@ -61,5 +62,22 @@ public class PlayController : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireCube(rigidbody2D.position + Vector2.down * 0.5f, new Vector2(0.6f, 0.6f));
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        rigidbody2D.velocity = new Vector2(0, rigidbody2D.velocity.y);
+        if(collision.gameObject.name != "Tilemap")
+            Debug.Log(collision.gameObject.name);
+        // condition to destory object
+        switch (collision.gameObject.name)
+        {
+            case "Tilemap":
+                break;
+    
+            default:
+                Destroy(collision.gameObject, 1);
+                break;
+        }
     }
 }
