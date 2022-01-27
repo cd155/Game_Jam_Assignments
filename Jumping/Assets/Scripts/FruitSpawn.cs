@@ -19,7 +19,7 @@ public class FruitSpawn: MonoBehaviour
         StartCoroutine(StartFruitSpawn());
     }
 
-    IEnumerator StartFruitSpawn()
+    private IEnumerator StartFruitSpawn()
     {
         while(true)
         {
