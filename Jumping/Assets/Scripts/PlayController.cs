@@ -53,7 +53,7 @@ public class PlayController : MonoBehaviour
         jumpLarge = Input.GetKey(KeyCode.C);
     }
 
-    bool isGrounded()
+    private bool isGrounded()
     {
         Collider2D groundCollider = Physics2D.OverlapBox(rigidbody2D.position + Vector2.down*0.6f, new Vector2(0.6f,0.6f), 0.0f, platformLayerMask);
         return groundCollider != null;
