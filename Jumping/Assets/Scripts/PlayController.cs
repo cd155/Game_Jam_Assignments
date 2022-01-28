@@ -68,8 +68,6 @@ public class PlayController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.name != "Tilemap")
-            Debug.Log(collision.gameObject.name);
         // condition to destory object
         switch (collision.gameObject.name)
         {
