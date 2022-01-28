@@ -10,12 +10,14 @@ public class PlayController : MonoBehaviour
     float jumpSpeedMiddle = 35.0f;
     float jumpSpeedLarge = 45.0f;
     float originalX = 0.0f;
+
     [SerializeField] LayerMask platformLayerMask;
     // bool leftInput;
     // bool rightInput;
     bool jumpShort;
     bool jumpMiddle;
     bool jumpLarge;
+    private float time = 1.0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -66,7 +68,6 @@ public class PlayController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        rigidbody2D.velocity = new Vector2(0, rigidbody2D.velocity.y);
         if(collision.gameObject.name != "Tilemap")
             Debug.Log(collision.gameObject.name);
         // condition to destory object
@@ -76,6 +77,18 @@ public class PlayController : MonoBehaviour
                 break;
     
             default:
+                List<GameObject> targetList = GameObject.Find("Score Board").GetComponent<ScoreBoard>().targetList;
+
+                if(targetList.Count > 0 && targetList[0].name == collision.gameObject.name)
+                {
+                    Destroy(targetList[0], time);
+                    targetList.RemoveAt(0);
+                }
+
+                if(targetList.Count == 0)
+                {
+                    Debug.Log("You Won");
+                }
                 Destroy(collision.gameObject, 1);
                 break;
         }
