@@ -45,7 +45,6 @@ public class FruitSpawn: MonoBehaviour
     {
         if(isBoxOne)
         {
-            Debug.Log("One:" + Random.Range(0, boxOne.Count));
             var select = boxOne[Random.Range(0, boxOne.Count)];
             boxOne.Remove(select);
             boxTwo.Add(select);
@@ -58,7 +57,6 @@ public class FruitSpawn: MonoBehaviour
         }
         else
         {
-            Debug.Log("Two: " + Random.Range(0, boxOne.Count));
             var select = boxTwo[Random.Range(0, boxTwo.Count)];
             boxTwo.Remove(select);
             boxOne.Add(select);
