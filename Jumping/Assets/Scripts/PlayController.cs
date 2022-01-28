@@ -10,6 +10,7 @@ public class PlayController : MonoBehaviour
     float jumpSpeedMiddle = 35.0f;
     float jumpSpeedLarge = 45.0f;
     float originalX = 0.0f;
+    float originalY = 0.0f;
 
     [SerializeField] LayerMask platformLayerMask;
     // bool leftInput;
@@ -23,6 +24,7 @@ public class PlayController : MonoBehaviour
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
         originalX = rigidbody2D.position.x;
+        originalY = rigidbody2D.position.y;
     }
 
     // Update is called once per frame
@@ -39,10 +41,6 @@ public class PlayController : MonoBehaviour
         else if (jumpLarge && isGrounded())
         {
             rigidbody2D.velocity = new Vector2(0, jumpSpeedLarge);
-        }
-        else if (isGrounded())
-        {
-            rigidbody2D.MovePosition(new Vector2(originalX, rigidbody2D.position.y));
         }
     }
 
@@ -91,5 +89,10 @@ public class PlayController : MonoBehaviour
                 Destroy(collision.gameObject, 1);
                 break;
         }
+    }
+    
+    private void OnBecameInvisible()
+    {
+        transform.position = new Vector3(originalX, originalY);
     }
 }
