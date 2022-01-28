@@ -87,8 +87,9 @@ public class PlayController : MonoBehaviour
 
                 if(targetList.Count == 0)
                 {
-                    Debug.Log("You Won");
+                    FindObjectOfType<GameManager>().EndGame();
                 }
+
                 Destroy(collision.gameObject, 1);
                 break;
         }
