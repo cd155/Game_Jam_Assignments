@@ -873,8 +873,6 @@ MonoBehaviour:
   - {fileID: 2204900667894381086, guid: f5bff1278d66a431c9c4e2b09fb77439, type: 3}
   - {fileID: 1756991186662995399, guid: 766265167d5684c96b4f167d12212fc5, type: 3}
   - {fileID: 1075979669997305420, guid: fbe78f57832bd4d7896c8be35f90fc71, type: 3}
-  - {fileID: 2180633458633175279, guid: 1de55947f42634537aaf1c75841facb6, type: 3}
-  - {fileID: 2617456630629236472, guid: c99792ef0bd0146e6983fe41756b9e67, type: 3}
   targetList: []
 --- !u!4 &1784573855
 Transform:
@@ -946,8 +944,6 @@ MonoBehaviour:
   - {fileID: 2204900667894381086, guid: f5bff1278d66a431c9c4e2b09fb77439, type: 3}
   - {fileID: 1756991186662995399, guid: 766265167d5684c96b4f167d12212fc5, type: 3}
   - {fileID: 1075979669997305420, guid: fbe78f57832bd4d7896c8be35f90fc71, type: 3}
-  - {fileID: 2180633458633175279, guid: 1de55947f42634537aaf1c75841facb6, type: 3}
-  - {fileID: 2617456630629236472, guid: c99792ef0bd0146e6983fe41756b9e67, type: 3}
   secondSpawn: 1
   minTras: -0.055
   maxTras: 8
