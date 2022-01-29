@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class FruitSpawn: MonoBehaviour
 {
-    [SerializeField] GameObject[] fruitPrefab;
-    [SerializeField] float secondSpawn = 30.0f;
+    public GameObject[] fruitPrefab;
+    [SerializeField] float secondSpawn = 40.0f;
     [SerializeField] float minTras;
     [SerializeField] float maxTras;
-    private float minThrust = 70.0f;
-    private float maxThrust = 250.0f;
+    private float minThrust = 6.50f;
+    private float maxThrust = 12.50f;
     private float time = 15.0f;
     List<float>  boxOne;
     List<float>  boxTwo;
@@ -74,9 +74,8 @@ public class FruitSpawn: MonoBehaviour
         boxOne = new List<float>()
         {
             0.5f,
-            2.3f,
-            4.1f,
-            5.9f,
+            2.9f,
+            5.3f,
             7.7f,
         };
         boxTwo = new List<float>();

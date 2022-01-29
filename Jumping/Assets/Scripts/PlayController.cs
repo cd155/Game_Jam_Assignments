@@ -6,9 +6,9 @@ public class PlayController : MonoBehaviour
 {   
     float speed = 5.0f;
     Rigidbody2D rigidbody2D;
-    float jumpSpeedShort = 25.0f;
-    float jumpSpeedMiddle = 35.0f;
-    float jumpSpeedLarge = 45.0f;
+    float jumpSpeedShort = 6.5f;
+    float jumpSpeedMiddle = 9.0f;
+    float jumpSpeedLarge = 10.5f;
     float originalX = 0.0f;
     float originalY = 0.0f;
 
@@ -55,13 +55,19 @@ public class PlayController : MonoBehaviour
 
     private bool isGrounded()
     {
-        Collider2D groundCollider = Physics2D.OverlapBox(rigidbody2D.position + Vector2.down*0.6f, new Vector2(0.6f,0.6f), 0.0f, platformLayerMask);
+        Collider2D groundCollider = Physics2D.OverlapBox
+        (
+            rigidbody2D.position + Vector2.down * 0.40f, 
+            new Vector2(0.6f,0.6f), 
+            0.0f, 
+            platformLayerMask
+        );
         return groundCollider != null;
     }
 
     private void OnDrawGizmos()
     {
-        Gizmos.DrawWireCube(rigidbody2D.position + Vector2.down * 0.5f, new Vector2(0.6f, 0.6f));
+        Gizmos.DrawWireCube(rigidbody2D.position + Vector2.down * 0.40f, new Vector2(0.6f, 0.6f));
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -73,7 +79,7 @@ public class PlayController : MonoBehaviour
                 break;
     
             default:
-                List<GameObject> targetList = GameObject.Find("Score Board").GetComponent<ScoreBoard>().targetList;
+                List<GameObject> targetList = GameObject.Find("ScoreBoard").GetComponent<ScoreBoard>().targetList;
 
                 if(targetList.Count > 0 && targetList[0].name == collision.gameObject.name)
                 {
@@ -86,7 +92,7 @@ public class PlayController : MonoBehaviour
                     FindObjectOfType<GameManager>().EndGame();
                 }
 
-                Destroy(collision.gameObject, 1);
+                Destroy(collision.gameObject, 2);
                 break;
         }
     }
