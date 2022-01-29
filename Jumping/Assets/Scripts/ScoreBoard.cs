@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ScoreBoard : MonoBehaviour
 {
-    [SerializeField] GameObject[] fruitPrefab;
     float positionX = 6.0f;
     float positionY = 9.0f;
     float distance = 1.0f;
@@ -14,18 +13,22 @@ public class ScoreBoard : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Debug.Log("start");
         targetList = new List<GameObject>();
         generateScoreBoard();
     }
 
     private void generateScoreBoard()
-    {   
+    {                   
+        GameObject[] fruitPrefab = GameObject.Find("Fruit").GetComponent<FruitSpawn>().fruitPrefab;
+        Debug.Log(fruitPrefab.Length);
         for(int i = 0; i<targetNumber; i++)
         {
             Vector3 position = new Vector3(positionX, positionY);
             GameObject gameObject = Instantiate
             (
-                fruitPrefab[Random.Range(0, fruitPrefab.Length)], 
+                // rocket is the last one in fruitPrefab 
+                fruitPrefab[Random.Range(0, fruitPrefab.Length - 1)], 
                 position, 
                 Quaternion.identity
             );
