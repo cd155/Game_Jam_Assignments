@@ -112,8 +112,7 @@ public class PlayController : MonoBehaviour
 
                 if(targetList.Count == 0)
                 {
-                    MuteRest();
-                    wining.Play();
+                    PlayWinSound();
                     FindObjectOfType<GameManager>().Winning();
                 }
 
@@ -142,12 +141,6 @@ public class PlayController : MonoBehaviour
         transform.position = new Vector3(originalX, originalY);
     }
 
-    private void PlayGameOverSound()
-    {
-        MuteRest();
-        gameover.Play();
-    }
-
     private void MuteRest()
     {
         collecting.mute = true;
@@ -156,11 +149,29 @@ public class PlayController : MonoBehaviour
         falling.mute = true;
     }
 
+    private void PlayGameOverSound()
+    {
+        MuteRest();
+        if (!gameover.isPlaying)
+        {
+            gameover.Play();
+        }
+    }
+
+    private void PlayWinSound()
+    {
+        MuteRest();
+        if (!wining.isPlaying)
+        {
+            wining.Play();
+        }
+    }
+
     private void PlayCollectingSound()
     {
         if (!collecting.isPlaying)
         {
             collecting.Play();
         }
-     }
+    }
 }
