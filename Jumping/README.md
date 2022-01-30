@@ -1,6 +1,7 @@
 ## Introduction
 ### At Start
 In the beginning, a snail character will display on the left bottom position.
+
 <img width="480" alt="Screen Shot 2022-01-29 at 6 35 12 PM" src="https://user-images.githubusercontent.com/16947266/151689384-eda60846-42da-458d-9eda-01bd76776ad0.png">
 
 Figure 1
