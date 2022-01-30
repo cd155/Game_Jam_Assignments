@@ -79,7 +79,8 @@ public class PlayController : MonoBehaviour
             case "Tilemap":
                 break;
 
-            case "rocket":
+            case "rocket(Clone)":
+                Destroy(collision.gameObject, 0);
                 chance -= 1;
                 if(chance == 0)
                 {
@@ -107,7 +108,16 @@ public class PlayController : MonoBehaviour
     }
     
     private void OnBecameInvisible()
-    {
+    {   
+        //fall out from the ground
+        if(rigidbody2D.position.x < -3.0f || rigidbody2D.position.y < 0.0f)
+        {
+            chance -= 1;
+            if(chance == 0)
+            {
+                FindObjectOfType<GameManager>().EndGame();
+            }
+        }
         transform.position = new Vector3(originalX, originalY);
     }
 }
