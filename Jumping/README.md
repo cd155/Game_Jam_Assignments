@@ -15,7 +15,7 @@ The snail can jump in three heights. Press keyboard **Z**, **X**, and **C** to a
 - middle jump: press **X**
 - large jump: press **C**
 
-<img width="480" alt="Screen Shot 2022-01-29 at 6 41 05 PM" src="https://user-images.githubusercontent.com/16947266/151683070-83710ae8-77f1-4d80-bcce-4c81fcd39626.png">
+<img width="480" src="https://github.com/cd155/Game_Jam_Assignments/blob/main/Jumping/Recordings/jumping.gif">
 
 ### Basic rule
 1. The fruit will be collected once the snail hits the fruit.
@@ -24,6 +24,8 @@ The snail can jump in three heights. Press keyboard **Z**, **X**, and **C** to a
 
 #### Winning condition
 - The snail hit all targets before lose conditions meet.
+
+<img width="480" src="https://github.com/cd155/Game_Jam_Assignments/blob/main/Jumping/Recordings/complete.gif">
 
 #### Lose condition
 - The rocket serves as the obstacle, the player has certain limitations hit by it. Once the number limitation is reached, it is game over.
@@ -46,6 +48,8 @@ This decision is the main focus on the assignment's constraints which jumping is
 There will be objects floating from right to left. Once the character touch object, the object will be collected. There are various object
 - various fruits: the player needs to hit the targeted fruit to move to the next target
 - rocket: the player needs to avoid being hit by a rocket, otherwise it will lose one chance.
+
+<img width="480" src="https://github.com/cd155/Game_Jam_Assignments/blob/main/Jumping/Recordings/hit.gif">
 
 #### Why made this decision 
 Since jumping is the only mechanic, I introduced some background mechanics to enrich the game. The fruits and rocket elements will help to create different actions to accomplish challenges.
