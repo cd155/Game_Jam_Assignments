@@ -8,12 +8,13 @@ public class FruitSpawn: MonoBehaviour
     [SerializeField] float secondSpawn = 40.0f;
     [SerializeField] float minTras;
     [SerializeField] float maxTras;
-    private float minThrust = 6.50f;
-    private float maxThrust = 12.50f;
-    private float time = 15.0f;
+    private float minThrust = 12.50f;
+    private float maxThrust = 25.00f;
+    private float time = 10.0f;
     List<float>  boxOne;
     List<float>  boxTwo;
     bool isBoxOne = true;
+    public bool isSpawn = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +26,7 @@ public class FruitSpawn: MonoBehaviour
 
     private IEnumerator StartFruitSpawn()
     {
-        while(true)
+        while(isSpawn)
         {
             var wanted = randomRange();
             var position = new Vector3(transform.position.x, wanted);
