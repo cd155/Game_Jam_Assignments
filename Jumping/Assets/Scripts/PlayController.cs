@@ -13,8 +13,13 @@ public class PlayController : MonoBehaviour
     float originalY = 0.0f;
 
     [SerializeField] LayerMask platformLayerMask;
-    // bool leftInput;
-    // bool rightInput;
+    [SerializeField] AudioSource collecting;
+    [SerializeField] AudioSource damaging;
+    [SerializeField] AudioSource falling;
+    [SerializeField] AudioSource jumping;
+    [SerializeField] AudioSource wining;
+    [SerializeField] AudioSource gameover;
+
     bool jumpShort;
     bool jumpMiddle;
     bool jumpLarge;
@@ -33,22 +38,23 @@ public class PlayController : MonoBehaviour
     {
         if (jumpShort && isGrounded())
         {
+            jumping.Play();
             rigidbody2D.velocity = new Vector2(0, jumpSpeedShort);
         }
         else if (jumpMiddle && isGrounded())
         {
+            jumping.Play();
             rigidbody2D.velocity = new Vector2(0, jumpSpeedMiddle);
         }
         else if (jumpLarge && isGrounded())
         {
+            jumping.Play();
             rigidbody2D.velocity = new Vector2(0, jumpSpeedLarge);
         }
     }
 
     void Update()
     {
-        // leftInput = Input.GetKey(KeyCode.LeftArrow);
-        // rightInput = Input.GetKey(KeyCode.RightArrow);
         jumpShort = Input.GetKey(KeyCode.Z);
         jumpMiddle = Input.GetKey(KeyCode.X);
         jumpLarge = Input.GetKey(KeyCode.C);
@@ -80,6 +86,7 @@ public class PlayController : MonoBehaviour
                 break;
 
             case "rocket(Clone)":
+                damaging.Play();
                 Destroy(collision.gameObject, 0);
                 chance -= 1;
                 List<GameObject> chanceIndicator = GameObject.Find("ScoreBoard").GetComponent<ScoreBoard>().chanceIndicator;
@@ -88,11 +95,13 @@ public class PlayController : MonoBehaviour
 
                 if(chance == 0)
                 {
+                    PlayGameOverSound();
                     FindObjectOfType<GameManager>().EndGame();
                 }
                 break;
 
             default:
+                PlayCollectingSound();
                 List<GameObject> targetList = GameObject.Find("ScoreBoard").GetComponent<ScoreBoard>().targetList;
 
                 if(targetList.Count > 0 && targetList[0].name == collision.gameObject.name)
@@ -103,6 +112,8 @@ public class PlayController : MonoBehaviour
 
                 if(targetList.Count == 0)
                 {
+                    MuteRest();
+                    wining.Play();
                     FindObjectOfType<GameManager>().Winning();
                 }
 
@@ -116,6 +127,7 @@ public class PlayController : MonoBehaviour
         //fall out from the ground
         if(rigidbody2D.position.x < -3.0f || rigidbody2D.position.y < 0.0f)
         {
+            falling.Play();
             chance -= 1;
             List<GameObject> chanceIndicator = GameObject.Find("ScoreBoard").GetComponent<ScoreBoard>().chanceIndicator;
             Destroy(chanceIndicator[0], 0);
@@ -123,9 +135,32 @@ public class PlayController : MonoBehaviour
 
             if(chance == 0)
             {
+                PlayGameOverSound();
                 FindObjectOfType<GameManager>().EndGame();
             }
         }
         transform.position = new Vector3(originalX, originalY);
     }
+
+    private void PlayGameOverSound()
+    {
+        MuteRest();
+        gameover.Play();
+    }
+
+    private void MuteRest()
+    {
+        collecting.mute = true;
+        damaging.mute = true;
+        jumping.mute = true;
+        falling.mute = true;
+    }
+
+    private void PlayCollectingSound()
+    {
+        if (!collecting.isPlaying)
+        {
+            collecting.Play();
+        }
+     }
 }
