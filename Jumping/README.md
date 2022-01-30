@@ -112,3 +112,8 @@ Those rule is for more advanced thinking, and may not be realistic to implement 
 2. There will be an object containing a "superfruit", which means the player can collect it at any time to move the next target.
 3. There will be the next level.
 4. New Hidden rule: Once the player completes a certain pattern of jumping, the superpower skill will be activated. For example, the snail can grab/suck the object on the horizon no matter how far the fruit is.
+
+## Reference
+- [Sunny Land](https://assetstore.unity.com/packages/2d/characters/sunny-land-103349)
+- [2D Speed Snail](https://assetstore.unity.com/packages/2d/characters/2d-speed-snail-109986)
+- [Fruits](https://opengameart.org/content/fruit-icons-redo)
