@@ -18,7 +18,7 @@ public class PlayController : MonoBehaviour
     bool jumpShort;
     bool jumpMiddle;
     bool jumpLarge;
-    private float time = 1.0f;
+    private float time = 2.0f;
     public int chance = 3;
     // Start is called before the first frame update
     void Start()
@@ -82,6 +82,10 @@ public class PlayController : MonoBehaviour
             case "rocket(Clone)":
                 Destroy(collision.gameObject, 0);
                 chance -= 1;
+                List<GameObject> chanceIndicator = GameObject.Find("ScoreBoard").GetComponent<ScoreBoard>().chanceIndicator;
+                Destroy(chanceIndicator[0], 0);
+                chanceIndicator.RemoveAt(0);
+
                 if(chance == 0)
                 {
                     FindObjectOfType<GameManager>().EndGame();
@@ -93,7 +97,7 @@ public class PlayController : MonoBehaviour
 
                 if(targetList.Count > 0 && targetList[0].name == collision.gameObject.name)
                 {
-                    Destroy(targetList[0], time);
+                    Destroy(targetList[0], 0);
                     targetList.RemoveAt(0);
                 }
 
@@ -102,7 +106,7 @@ public class PlayController : MonoBehaviour
                     FindObjectOfType<GameManager>().Winning();
                 }
 
-                Destroy(collision.gameObject, 2);
+                Destroy(collision.gameObject, time);
                 break;
         }
     }
@@ -113,6 +117,10 @@ public class PlayController : MonoBehaviour
         if(rigidbody2D.position.x < -3.0f || rigidbody2D.position.y < 0.0f)
         {
             chance -= 1;
+            List<GameObject> chanceIndicator = GameObject.Find("ScoreBoard").GetComponent<ScoreBoard>().chanceIndicator;
+            Destroy(chanceIndicator[0], 0);
+            chanceIndicator.RemoveAt(0);
+
             if(chance == 0)
             {
                 FindObjectOfType<GameManager>().EndGame();

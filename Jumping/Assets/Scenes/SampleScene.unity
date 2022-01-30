@@ -1045,6 +1045,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetList: []
+  chanceIndicator: []
+  chanceIcon: {fileID: 596658275225385058, guid: 7be4e2341ebbf421eaf9b82fdca1fbf9, type: 3}
 --- !u!4 &1784573855
 Transform:
   m_ObjectHideFlags: 0

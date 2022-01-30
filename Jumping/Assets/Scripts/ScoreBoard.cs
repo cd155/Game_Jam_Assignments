@@ -6,15 +6,19 @@ public class ScoreBoard : MonoBehaviour
 {
     float positionX = 6.0f;
     float positionY = 9.0f;
+    float positionXIcon = 0.0f;
     float distance = 1.0f;
     int targetNumber = 4;
     public List<GameObject> targetList;
-
+    public List<GameObject> chanceIndicator;
+    [SerializeField] GameObject chanceIcon;
     // Start is called before the first frame update
     void Start()
     {
         targetList = new List<GameObject>();
+        chanceIndicator = new List<GameObject>();
         generateScoreBoard();
+        generateChanceIndicator();
     }
 
     private void generateScoreBoard()
@@ -35,9 +39,21 @@ public class ScoreBoard : MonoBehaviour
             positionX = positionX + distance;
         }
     }
-    // Update is called once per frame
-    void Update()
+
+    private void generateChanceIndicator()
     {
-        
+        int chance = GameObject.Find("Snail").GetComponent<PlayController>().chance;
+        for(int i = 0; i<chance; i++)
+        {
+            Vector3 position = new Vector3(positionXIcon, positionY);
+            GameObject gameObject = Instantiate
+            (
+                chanceIcon, 
+                position, 
+                Quaternion.identity
+            );
+            chanceIndicator.Add(gameObject);
+            positionXIcon = positionXIcon - distance;
+        }
     }
 }
