@@ -19,6 +19,7 @@ public class PlayController : MonoBehaviour
     bool jumpMiddle;
     bool jumpLarge;
     private float time = 1.0f;
+    public int chance = 3;
     // Start is called before the first frame update
     void Start()
     {
@@ -57,8 +58,8 @@ public class PlayController : MonoBehaviour
     {
         Collider2D groundCollider = Physics2D.OverlapBox
         (
-            rigidbody2D.position + Vector2.down * 0.40f, 
-            new Vector2(0.6f,0.6f), 
+            rigidbody2D.position + Vector2.down * 0.15f, 
+            new Vector2(1.2f,1.2f), 
             0.0f, 
             platformLayerMask
         );
@@ -67,7 +68,7 @@ public class PlayController : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        Gizmos.DrawWireCube(rigidbody2D.position + Vector2.down * 0.40f, new Vector2(0.6f, 0.6f));
+        Gizmos.DrawWireCube(rigidbody2D.position + Vector2.down * 0.15f, new Vector2(1.2f, 1.2f));
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -77,7 +78,15 @@ public class PlayController : MonoBehaviour
         {
             case "Tilemap":
                 break;
-    
+
+            case "rocket":
+                chance -= 1;
+                if(chance == 0)
+                {
+                    FindObjectOfType<GameManager>().EndGame();
+                }
+                break;
+
             default:
                 List<GameObject> targetList = GameObject.Find("ScoreBoard").GetComponent<ScoreBoard>().targetList;
 
@@ -89,7 +98,7 @@ public class PlayController : MonoBehaviour
 
                 if(targetList.Count == 0)
                 {
-                    FindObjectOfType<GameManager>().EndGame();
+                    FindObjectOfType<GameManager>().Winning();
                 }
 
                 Destroy(collision.gameObject, 2);

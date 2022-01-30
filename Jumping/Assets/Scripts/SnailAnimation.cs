@@ -13,6 +13,9 @@ public class SnailAnimation: MonoBehaviour
     bool xInput;
     bool cInput;
 
+    public bool isWin;
+    public bool isLose;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +27,8 @@ public class SnailAnimation: MonoBehaviour
     private void FixedUpdate()
     {
         animator.SetBool("isJump", rigidbody2D.velocity.y != 0);
+        animator.SetBool("isWin", isWin);
+        animator.SetBool("isLose", isLose);
 
         if (leftInput) spriteRenderer.flipX = true;
         else if (rightInput) spriteRenderer.flipX = false;
