@@ -13,7 +13,6 @@ public class ScoreBoard : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("start");
         targetList = new List<GameObject>();
         generateScoreBoard();
     }
@@ -21,7 +20,6 @@ public class ScoreBoard : MonoBehaviour
     private void generateScoreBoard()
     {                   
         GameObject[] fruitPrefab = GameObject.Find("Fruit").GetComponent<FruitSpawn>().fruitPrefab;
-        Debug.Log(fruitPrefab.Length);
         for(int i = 0; i<targetNumber; i++)
         {
             Vector3 position = new Vector3(positionX, positionY);
