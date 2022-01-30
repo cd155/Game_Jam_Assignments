@@ -1,7 +1,8 @@
 ## Introduction
 ### At Start
 In the beginning, a snail character will display on the left bottom position.
-<img width="480" alt="Screen Shot 2022-01-29 at 6 35 12 PM" src="https://user-images.githubusercontent.com/16947266/151683027-ea0f61e4-380f-46d4-9b45-49b0d255af94.png">
+<img width="480" alt="Screen Shot 2022-01-29 at 6 35 12 PM" src="https://user-images.githubusercontent.com/16947266/151689384-eda60846-42da-458d-9eda-01bd76776ad0.png">
+
 Figure 1
 
 - On the left top, there are three hearts, which means the player has three chances to be hit by a rock or fall out from the ground.
