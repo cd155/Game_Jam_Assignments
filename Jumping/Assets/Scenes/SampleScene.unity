@@ -1106,12 +1106,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fruitPrefab:
   - {fileID: 6472559375802369876, guid: 0bb6d9ea85700410c9ee99f0a98545df, type: 3}
-  - {fileID: 315573208800124035, guid: 50aae4d2d0043404da8f0e4518d3c5bb, type: 3}
   - {fileID: 5407412723047495996, guid: b8908ba2e24ff4015ab5f322d29b8fec, type: 3}
   - {fileID: 2334038624747244796, guid: 731257e0ffa1247c98a61279ac2c0e9e, type: 3}
   - {fileID: 1278946698884243485, guid: dc70b4ec695f1471bb6fb7a64b8376ae, type: 3}
   - {fileID: 2204900667894381086, guid: f5bff1278d66a431c9c4e2b09fb77439, type: 3}
   - {fileID: 3965203093585402688, guid: c27cb66d7e2684d84b6f2d56d062a7b6, type: 3}
+  - {fileID: 6241767736877868793, guid: 7dfc9816206bb49109378d1d4bbeed32, type: 3}
   - {fileID: 4155511417058425629, guid: 4b31d056a7f8f422395d204f8a8cdd96, type: 3}
   secondSpawn: 1
   minTras: -0.055
