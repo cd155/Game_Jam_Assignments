@@ -95,8 +95,17 @@ Each animation related to actions that made
 
 Those animations help to improve the aesthetics. It makes the player feel natural about each action. Also, animations made related to a snail are very natural. These animations mimic how a snail could do in the real world.
 
-### React soundtrack
-React sound further make the game more natural,  it is also a signal to confirm whether a target is hit or obstacles.
+### Soundtrack
+Soundtracks further make the game more natural,  it is also a signal to confirm whether a target is hit or obstacles.
+- Background music: cricket background music
+- Wining sound effect: when all fruits are collected
+- Losing sound effect: when losing all health
+- Jumping sound effect: when the snail is jumping (press **Z, X,C**)
+- Pain sound effect: when hit by a rocket
+- Success sound effect: when hit by a fruit
+- Fall out from the ground sound effect: when the snail is falling out from the ground
+
+These soundtracks were carefully selected to fit the theme. All soundtracks give related feedback once the play is done with some actions. If the action is helpful or not helpful for completing the challenge, they can judge based on the altitude of the soundtrack (neutral, positive or negative).
 
 ## Hidden rule
 After a snail jump, it can land in a fruit. During this time, the snail can continue to jump before fruit land on the ground. In such an event, the snail could jump a high distance and leave the main display. The hidden rule will be triggered, and it will transform the snail to the original position.
