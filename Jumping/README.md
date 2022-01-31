@@ -114,6 +114,11 @@ Those rule is for more advanced thinking, and may not be realistic to implement 
 4. New Hidden rule: Once the player completes a certain pattern of jumping, the superpower skill will be activated. For example, the snail can grab/suck the object on the horizon no matter how far the fruit is.
 
 ## Reference
-- [Sunny Land](https://assetstore.unity.com/packages/2d/characters/sunny-land-103349)
-- [2D Speed Snail](https://assetstore.unity.com/packages/2d/characters/2d-speed-snail-109986)
-- [Fruits](https://opengameart.org/content/fruit-icons-redo)
+- All images come from free open sources
+    - [Sunny Land](https://assetstore.unity.com/packages/2d/characters/sunny-land-103349)
+    - [2D Speed Snail](https://assetstore.unity.com/packages/2d/characters/2d-speed-snail-109986)
+    - [Fruits](https://opengameart.org/content/fruit-icons-redo)
+- Some scripts were initially introduced in the following references, but have been heavily edited
+    - [Jumping Tutorial](https://www.youtube.com/watch?v=UL_juQ3Y1OU&t=4224s)
+    - [Fruit Spwaning Tutorial](https://www.youtube.com/watch?v=j6p5Nh7JvmY&t=1s)
+- All sounds effect comes from [mixkit](https://mixkit.co)
