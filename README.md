@@ -8,3 +8,5 @@ This is practice for game development. All games developer in [Unity](https://un
 
 #### Example
 <img width="480" src="https://github.com/cd155/Game_Jam_Assignments/blob/main/Jumping/Recordings/complete.gif">
+
+## Weird University Curriculum
