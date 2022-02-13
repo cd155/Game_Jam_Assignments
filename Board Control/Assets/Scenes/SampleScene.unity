@@ -159,7 +159,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -102.91, y: -207.4}
+  m_AnchoredPosition: {x: -106.91, y: -207.4}
   m_SizeDelta: {x: 95, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &13792801
@@ -489,7 +489,7 @@ GameObject:
   - component: {fileID: 106798083}
   - component: {fileID: 106798084}
   m_Layer: 0
-  m_Name: down (2)
+  m_Name: down3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1154,7 +1154,7 @@ GameObject:
   - component: {fileID: 394600223}
   - component: {fileID: 394600224}
   m_Layer: 0
-  m_Name: south-east arrow (1)
+  m_Name: south-east2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1236,7 +1236,7 @@ GameObject:
   - component: {fileID: 451874341}
   - component: {fileID: 451874342}
   m_Layer: 0
-  m_Name: south-west arrow
+  m_Name: south-west1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1318,7 +1318,7 @@ GameObject:
   - component: {fileID: 487553307}
   - component: {fileID: 487553308}
   m_Layer: 0
-  m_Name: down (1)
+  m_Name: down2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2254,7 +2254,7 @@ GameObject:
   - component: {fileID: 768739232}
   - component: {fileID: 768739233}
   m_Layer: 0
-  m_Name: down (4)
+  m_Name: down5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2838,7 +2838,7 @@ GameObject:
   - component: {fileID: 952733032}
   - component: {fileID: 952733033}
   m_Layer: 0
-  m_Name: right (1)
+  m_Name: right2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2945,7 +2945,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 110, y: -207.4}
+  m_AnchoredPosition: {x: 106, y: -207.4}
   m_SizeDelta: {x: 95, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &957508754
@@ -3258,7 +3258,7 @@ GameObject:
   - component: {fileID: 1045533635}
   - component: {fileID: 1045533636}
   m_Layer: 0
-  m_Name: right
+  m_Name: right1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3340,7 +3340,7 @@ GameObject:
   - component: {fileID: 1108152327}
   - component: {fileID: 1108152328}
   m_Layer: 0
-  m_Name: south-east arrow
+  m_Name: south-east1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3447,7 +3447,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2.96, y: -207.9}
+  m_AnchoredPosition: {x: -1.039998, y: -207.9}
   m_SizeDelta: {x: 95, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1181698024
@@ -4125,7 +4125,7 @@ GameObject:
   - component: {fileID: 1431658846}
   - component: {fileID: 1431658847}
   m_Layer: 0
-  m_Name: down (3)
+  m_Name: down4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5118,7 +5118,7 @@ GameObject:
   - component: {fileID: 1840135692}
   - component: {fileID: 1840135693}
   m_Layer: 0
-  m_Name: down
+  m_Name: down1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5666,7 +5666,7 @@ GameObject:
   - component: {fileID: 2053408206}
   - component: {fileID: 2053408207}
   m_Layer: 0
-  m_Name: south-west arrow (1)
+  m_Name: south-west2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
