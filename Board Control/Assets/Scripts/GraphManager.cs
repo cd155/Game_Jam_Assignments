@@ -57,8 +57,6 @@ public class GraphManager : MonoBehaviour
 
         nodeAvaliable.Add(math1);
         nodeAvaliable.Add(chemistry);
-                nodeAvaliable.Add(probability);
-
         #endregion
 
         #region Modify Node Relation
@@ -126,5 +124,10 @@ public class GraphManager : MonoBehaviour
                 option3.gameObject.SetActive(true);
                 break;
         }
+    }
+
+    public void ShowSelectNode()
+    {
+        Debug.Log("cross");
     }
 }

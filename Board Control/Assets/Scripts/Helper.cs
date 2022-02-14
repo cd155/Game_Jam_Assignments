@@ -16,7 +16,7 @@ namespace HelperLibrary
 
         public int Next()
         {
-            if(avaliableChoice.Count > 1)
+            if(avaliableChoice.Count > 0)
             {
                 int randomNum = Random.Range(0, avaliableChoice.Count);
                 int randomVAlue = avaliableChoice[randomNum];

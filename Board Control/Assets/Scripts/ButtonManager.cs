@@ -20,6 +20,7 @@ public class ButtonManager : MonoBehaviour
 
     private int max = 2;
     private int track;
+    public GameObject graphManager;
 
     void Start()
     {
@@ -82,6 +83,23 @@ public class ButtonManager : MonoBehaviour
 
     public void ConfirmButtonClicked()
     {
-        Debug.Log("Confirm clicked");
+        List<string> confirmList = new List<string>();
+        if(isWhite1)
+        {
+            confirmList.Add(option1.name);
+        }
+        if(isWhite2)
+        {
+            confirmList.Add(option2.name);
+        }
+        if(isWhite3)
+        {
+            confirmList.Add(option3.name);
+        }
+
+        if(confirmList.Count > 0)
+        {
+            graphManager.GetComponent<GraphManager>().ShowSelectNode();
+        }
     }
 }
