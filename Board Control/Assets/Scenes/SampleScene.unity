@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 13792803}
   - component: {fileID: 13792802}
   - component: {fileID: 13792801}
+  - component: {fileID: 13792804}
   m_Layer: 0
   m_Name: option1
   m_TagString: Untagged
@@ -205,7 +206,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 13792802}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1590643579}
+        m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
+        m_MethodName: ChoiceButtonClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &13792802
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -244,6 +257,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 13792799}
   m_CullTransparentMesh: 1
+--- !u!114 &13792804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 13792799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c9b4360ce9cef943ae0349257ce87b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &39691415
 GameObject:
   m_ObjectHideFlags: 0
@@ -1796,7 +1821,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -2212,7 +2237,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -2930,7 +2955,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -3068,6 +3093,7 @@ GameObject:
   - component: {fileID: 957508756}
   - component: {fileID: 957508755}
   - component: {fileID: 957508754}
+  - component: {fileID: 957508757}
   m_Layer: 0
   m_Name: option3
   m_TagString: Untagged
@@ -3177,6 +3203,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 957508752}
   m_CullTransparentMesh: 1
+--- !u!114 &957508757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 957508752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c9b4360ce9cef943ae0349257ce87b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &966737347
 GameObject:
   m_ObjectHideFlags: 0
@@ -3570,6 +3608,7 @@ GameObject:
   - component: {fileID: 1181698026}
   - component: {fileID: 1181698025}
   - component: {fileID: 1181698024}
+  - component: {fileID: 1181698027}
   m_Layer: 0
   m_Name: option2
   m_TagString: Untagged
@@ -3679,6 +3718,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1181698022}
   m_CullTransparentMesh: 1
+--- !u!114 &1181698027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1181698022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c9b4360ce9cef943ae0349257ce87b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1202059925
 GameObject:
   m_ObjectHideFlags: 0
@@ -4559,7 +4610,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1515853909}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1590643579}
+        m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
+        m_MethodName: ChoiceButtonClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1515853909
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4608,6 +4671,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1590643578}
   - component: {fileID: 1590643577}
+  - component: {fileID: 1590643579}
   m_Layer: 0
   m_Name: ButtonGroup
   m_TagString: Untagged
@@ -4659,6 +4723,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1590643579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1590643576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c9b4360ce9cef943ae0349257ce87b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1612502916
 GameObject:
   m_ObjectHideFlags: 0
@@ -5332,7 +5408,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535

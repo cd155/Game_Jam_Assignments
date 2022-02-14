@@ -26,12 +26,6 @@ public class GraphManager : MonoBehaviour
         GenerateOptions();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     void InitializeGraph()
     {
         #region Initiate All Nodes
@@ -97,9 +91,9 @@ public class GraphManager : MonoBehaviour
     void GenerateOptions()
     {
         int length = nodeAvaliable.Count;
-        Button option1 = GameObject.Find("/ButtonGroup/option1").GetComponent<Button>();
-        Button option2 = GameObject.Find("/ButtonGroup/option2").GetComponent<Button>();
-        Button option3 = GameObject.Find("/ButtonGroup/option3").GetComponent<Button>();
+        Button option1 = GameObject.Find("/ButtonGroup/Canvas/option1").GetComponent<Button>();
+        Button option2 = GameObject.Find("/ButtonGroup/Canvas/option2").GetComponent<Button>();
+        Button option3 = GameObject.Find("/ButtonGroup/Canvas/option3").GetComponent<Button>();
         switch (length)
         {
             case 1:
