@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using NodeLibrary;
+using UnityEngine.UI;
+using TMPro;
 
 public class GraphManager : MonoBehaviour
 {
@@ -10,11 +12,17 @@ public class GraphManager : MonoBehaviour
 
     // update once comfirm
     private List <Node> nodeAvaliable = new List<Node>(); 
+
+    private Node choice1;
+    private Node choice2;
+
     // Start is called before the first frame update
     void Start()
     {
         GameObject graph = GameObject.Find("Graph");
         graph.SetActive(false);
+        InitializeGraph();
+        GenerateOptions();
     }
 
     // Update is called once per frame
@@ -83,5 +91,33 @@ public class GraphManager : MonoBehaviour
         themo.AddPreviousList(chemistry, "right2", false);
         material.AddPreviousList(chemistry, "down2", false);
         #endregion
+    }
+
+    void GenerateOptions()
+    {
+        int length = nodeAvaliable.Count;
+        Button option1 = GameObject.Find("/ButtonGroup/option1").GetComponent<Button>();
+        Button option2 = GameObject.Find("/ButtonGroup/option2").GetComponent<Button>();
+        Button option3 = GameObject.Find("/ButtonGroup/option3").GetComponent<Button>();
+        switch (length)
+        {
+            case 1:
+                option1.GetComponentInChildren<Text>().text = nodeAvaliable[0].name;
+                option1.gameObject.SetActive(true);
+                option2.gameObject.SetActive(false);
+                option3.gameObject.SetActive(false);
+                break;
+            
+            case 2:
+                option1.GetComponentInChildren<TextMeshProUGUI>().text = nodeAvaliable[0].name;
+                option2.GetComponentInChildren<TextMeshProUGUI>().text = nodeAvaliable[1].name;
+                option1.gameObject.SetActive(true);
+                option2.gameObject.SetActive(true);
+                option3.gameObject.SetActive(false);
+                break;
+
+            default:
+                break;
+        }
     }
 }

@@ -5,7 +5,7 @@ namespace NodeLibrary
 {
     public class Node
     {
-        private string name;
+        public string name;
 
         private List <Node> nextList = new List<Node>();
 
