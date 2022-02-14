@@ -4,6 +4,7 @@ using UnityEngine;
 using NodeLibrary;
 using UnityEngine.UI;
 using TMPro;
+using HelperLibrary;
 
 public class GraphManager : MonoBehaviour
 {
@@ -117,6 +118,16 @@ public class GraphManager : MonoBehaviour
                 break;
 
             default:
+                RandomNoRepeat random = new RandomNoRepeat(0, nodeAvaliable.Count);
+                int randomIndex1 = random.Next();
+                int randomIndex2 = random.Next();
+                int randomIndex3 = random.Next();
+                option1.GetComponentInChildren<TextMeshProUGUI>().text = nodeAvaliable[randomIndex1].name;
+                option2.GetComponentInChildren<TextMeshProUGUI>().text = nodeAvaliable[randomIndex2].name;
+                option3.GetComponentInChildren<TextMeshProUGUI>().text = nodeAvaliable[randomIndex3].name;
+                option1.gameObject.SetActive(true);
+                option2.gameObject.SetActive(true);
+                option3.gameObject.SetActive(true);
                 break;
         }
     }
