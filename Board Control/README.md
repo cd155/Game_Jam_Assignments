@@ -16,6 +16,7 @@ This is the start UI. In options A, B, C, you can select classes you want to tak
 In the end, the question board will announce how many semesters you took to graduate.
 
 <img width="260" alt="gif_animation_003" src="https://user-images.githubusercontent.com/16947266/153958127-edff4f6a-76a6-4343-807f-046a1c47b32a.gif">
+
 ### Board Control mechanics
 #### Board
 In each turn, the player will decide which course will take. The board is the curriculum, and players have to plan smartly to complete all the required courses to graduate. The player has to guess what is the Prerequisite or Corequisite based on the title name of the class and availability of options. For example,
