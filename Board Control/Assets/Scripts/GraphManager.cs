@@ -17,11 +17,10 @@ public class GraphManager : MonoBehaviour
     private Node choice1;
     private Node choice2;
 
+    public GameObject graphManager;
     // Start is called before the first frame update
     void Start()
     {
-        GameObject graph = GameObject.Find("Graph");
-        graph.SetActive(false);
         InitializeGraph();
         GenerateOptions();
     }
@@ -96,8 +95,14 @@ public class GraphManager : MonoBehaviour
         Button option3 = GameObject.Find("/ButtonGroup/Canvas/option3").GetComponent<Button>();
         switch (length)
         {
+            case 0:
+                option1.gameObject.SetActive(false);
+                option2.gameObject.SetActive(false);
+                option3.gameObject.SetActive(false);
+                Debug.Log("You Selected this path");
+                break;
             case 1:
-                option1.GetComponentInChildren<Text>().text = nodeAvaliable[0].name;
+                option1.GetComponentInChildren<TextMeshProUGUI>().text = nodeAvaliable[0].name;
                 option1.gameObject.SetActive(true);
                 option2.gameObject.SetActive(false);
                 option3.gameObject.SetActive(false);
@@ -126,8 +131,23 @@ public class GraphManager : MonoBehaviour
         }
     }
 
-    public void ShowSelectNode()
+    public void ShowSelectNode(List<string> confirmList)
     {
-        Debug.Log("cross");
+        foreach (var item in confirmList)
+        {
+            Node finded = nodeAvaliable.Find(x => x.name == item);
+            Transform obj = graphManager.transform.Find(finded.name);
+            obj.gameObject.SetActive(true);
+            nodeAvaliable.Remove(finded);
+            foreach (var newNode in finded.nextList)
+            {
+                if(!nodeAvaliable.Exists(x => x.name == newNode.name))
+                {
+                    nodeAvaliable.Add(newNode);
+                }
+            }
+        }
+
+        GenerateOptions();
     }
 }

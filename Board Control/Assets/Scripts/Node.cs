@@ -7,9 +7,11 @@ namespace NodeLibrary
     {
         public string name;
 
-        private List <Node> nextList = new List<Node>();
+        //set setter and getter
+        public List <Node> nextList = new List<Node>();
 
-        private List <(Node, string, bool)> previousList = new List<(Node, string, bool)>();
+        //set setter and getter
+        public List <(Node, string, bool)> previousList = new List<(Node, string, bool)>();
     
         public Node(string name)
         {

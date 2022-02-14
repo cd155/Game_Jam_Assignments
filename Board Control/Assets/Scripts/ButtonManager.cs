@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class ButtonManager : MonoBehaviour
 {
@@ -84,22 +85,39 @@ public class ButtonManager : MonoBehaviour
     public void ConfirmButtonClicked()
     {
         List<string> confirmList = new List<string>();
-        if(isWhite1)
+        if(!isWhite1)
         {
-            confirmList.Add(option1.name);
+            confirmList.Add(option1.GetComponentInChildren<TextMeshProUGUI>().text);
         }
-        if(isWhite2)
+        if(!isWhite2)
         {
-            confirmList.Add(option2.name);
+            confirmList.Add(option2.GetComponentInChildren<TextMeshProUGUI>().text);
         }
-        if(isWhite3)
+        if(!isWhite3)
         {
-            confirmList.Add(option3.name);
+            confirmList.Add(option3.GetComponentInChildren<TextMeshProUGUI>().text);
         }
+
+        RestButtons();
 
         if(confirmList.Count > 0)
         {
-            graphManager.GetComponent<GraphManager>().ShowSelectNode();
+            graphManager.GetComponent<GraphManager>().ShowSelectNode(confirmList);
         }
+    }
+
+    public void RestButtons()
+    {
+        track = 0;
+        isWhite1 = true;
+        isWhite2 = true;
+        isWhite3 = true;
+
+        option1.GetComponent<Image>().sprite = imageWhite1;
+        option2.GetComponent<Image>().sprite = imageWhite2;
+        option3.GetComponent<Image>().sprite = imageWhite3;
+        option1.GetComponentInChildren<TextMeshProUGUI>().text = string.Empty;
+        option1.GetComponentInChildren<TextMeshProUGUI>().text = string.Empty;
+        option1.GetComponentInChildren<TextMeshProUGUI>().text = string.Empty;
     }
 }

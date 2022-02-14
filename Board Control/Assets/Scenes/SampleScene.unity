@@ -1940,6 +1940,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13e2a74f621fd744081f613a6bdc3d23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  graphManager: {fileID: 625466649}
 --- !u!1 &731809002
 GameObject:
   m_ObjectHideFlags: 0
