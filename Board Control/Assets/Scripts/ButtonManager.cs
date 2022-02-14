@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class ButtonManager : MonoBehaviour
 {
@@ -118,5 +119,15 @@ public class ButtonManager : MonoBehaviour
         option1.GetComponentInChildren<TextMeshProUGUI>().text = string.Empty;
         option1.GetComponentInChildren<TextMeshProUGUI>().text = string.Empty;
         option1.GetComponentInChildren<TextMeshProUGUI>().text = string.Empty;
+    }
+
+    public void RestartButtonClicked()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void CloseButtonClicked()
+    {
+        Application.Quit();
     }
 }
