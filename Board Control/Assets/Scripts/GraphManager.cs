@@ -57,6 +57,8 @@ public class GraphManager : MonoBehaviour
 
         nodeAvaliable.Add(math1);
         nodeAvaliable.Add(chemistry);
+                nodeAvaliable.Add(probability);
+
         #endregion
 
         #region Modify Node Relation
