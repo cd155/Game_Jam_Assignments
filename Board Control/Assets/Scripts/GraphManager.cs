@@ -18,6 +18,8 @@ public class GraphManager : MonoBehaviour
     private Node choice2;
 
     public GameObject graphManager;
+
+    private int numOfTerms = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -99,7 +101,9 @@ public class GraphManager : MonoBehaviour
                 option1.gameObject.SetActive(false);
                 option2.gameObject.SetActive(false);
                 option3.gameObject.SetActive(false);
-                Debug.Log("You Selected this path");
+
+                GameObject announcement = GameObject.Find("/Question/Canvas");
+                announcement.GetComponentInChildren<TextMeshProUGUI>().text = "You spent " + numOfTerms + " terms to graduate.";
                 break;
             case 1:
                 option1.GetComponentInChildren<TextMeshProUGUI>().text = nodeAvaliable[0].name;
@@ -133,6 +137,7 @@ public class GraphManager : MonoBehaviour
 
     public void ShowSelectNode(List<string> confirmList)
     {
+        numOfTerms ++;
         foreach (var item in confirmList)
         {
             Node finded = nodeAvaliable.Find(x => x.name == item);

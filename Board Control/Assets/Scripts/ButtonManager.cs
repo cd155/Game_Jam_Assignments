@@ -66,7 +66,6 @@ public class ButtonManager : MonoBehaviour
 
     public void ChoiceButton3Clicked()
     {
-        Debug.Log(track + "::" + max);
         if (track >= max && isWhite3) {return;}
         if(isWhite3)
         {
