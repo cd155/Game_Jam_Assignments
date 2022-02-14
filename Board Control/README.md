@@ -11,12 +11,11 @@ The game will be turn-based. Each term mimic one semester. The goal is to comple
 ### Example
 This is the start UI. In options A, B, C, you can select classes you want to take this semester, and then click confirm to move next semester.
 
-<img width="200" alt="Screen Shot 2022-01-29 at 6 35 12 PM" src="https://user-images.githubusercontent.com/16947266/153955186-9f2f8bf6-7f6f-4933-bf3f-582631f3e8b9.png">
+<img width="260" alt="Screen Shot 2022-01-29 at 6 35 12 PM" src="https://user-images.githubusercontent.com/16947266/153955186-9f2f8bf6-7f6f-4933-bf3f-582631f3e8b9.png">
 
 In the end, the question board will announce how many semesters you took to graduate.
 
-<img width="200" alt="Screen Shot 2022-01-29 at 6 35 12 PM" src="https://user-images.githubusercontent.com/16947266/153955602-fed60916-7317-400c-b771-d29c251bb9ff.png">
-
+<img width="260" alt="gif_animation_003" src="https://user-images.githubusercontent.com/16947266/153958127-edff4f6a-76a6-4343-807f-046a1c47b32a.gif">
 ### Board Control mechanics
 #### Board
 In each turn, the player will decide which course will take. The board is the curriculum, and players have to plan smartly to complete all the required courses to graduate. The player has to guess what is the Prerequisite or Corequisite based on the title name of the class and availability of options. For example,
