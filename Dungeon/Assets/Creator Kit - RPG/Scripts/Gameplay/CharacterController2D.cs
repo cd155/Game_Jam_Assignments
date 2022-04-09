@@ -22,6 +22,9 @@ namespace RPGM.Gameplay
         SpriteRenderer spriteRenderer;
         PixelPerfectCamera pixelPerfectCamera;
 
+        public GameObject ChickenPatrol1;
+        public GameObject ChickenPatrol2;
+
         enum State
         {
             Idle, Moving
@@ -101,23 +104,44 @@ namespace RPGM.Gameplay
             switch (collision.gameObject.name)
             {
                 case "Chicken1":
-                    MoveChicken (collision);
+                    MoveObject(collision);
                     break;
                 case "Chicken2":
-                    MoveChicken (collision);
+                    MoveObject(collision);
                     break;
                 case "Chicken3":
-                    MoveChicken (collision);
+                    MoveObject(collision);
                     break;
                 case "Chicken4":
-                    MoveChicken (collision);
-                    break;                                            
+                    MoveObject(collision);
+                    break; 
+                case "ChickenMove":
+                    MoveObject(collision);
+                    break;
+                case "GoldenApple1":
+                    MoveObject(collision);                    
+                    break;
+                case "GoldenApple2":
+                    MoveObject(collision);                    
+                    break;
+                case "ChickenPatrol1":
+                    var object1 = GameObject.Find("ChickenPatrol1");
+                    var mypatro1 = object1.GetComponent<Patrol>();
+                    mypatro1.dizzed = true;
+                    Destroy(object1, 6.0f);
+                    break; 
+                case "ChickenPatrol2":
+                    var object2 = GameObject.Find("ChickenPatrol2");
+                    var mypatro2 = object2.GetComponent<Patrol>();
+                    mypatro2.dizzed = true;
+                    Destroy(object2, 6.0f);
+                    break;                                                                                
                 default:
                     break;
             }
         }
 
-        private void MoveChicken(Collision2D collision)
+        private void MoveObject(Collision2D collision)
         {
             collision.transform.position = new Vector3(
                 collision.transform.position.x + nextMoveCommand.x, 
